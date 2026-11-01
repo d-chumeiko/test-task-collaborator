@@ -23,20 +23,27 @@ export default function Dropdown({ options, value, onChange }) {
 
   return (
     <div className={"dropdown"}>
-      <button ref={triggerRef} type="button" onClick={toggle}>
+      <button
+        ref={triggerRef}
+        type="button"
+        aria-expanded={open}
+        onClick={toggle}
+      >
         {value} ▾
       </button>
       {open && (
         <ul ref={menuRef} className={up ? 'dropdown-menu up' : 'dropdown-menu'}>
           {options.map((v) => (
-            <li
-              key={v}
-              onClick={() => {
-                onChange(v);
-                setOpen(false);
-              }}
-            >
-              {v}
+            <li key={v}>
+              <button
+                type="button"
+                onClick={() => {
+                  onChange(v);
+                  setOpen(false);
+                }}
+              >
+                {v}
+              </button>
             </li>
           ))}
         </ul>
