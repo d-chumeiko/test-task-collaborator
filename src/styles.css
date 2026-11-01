@@ -58,7 +58,6 @@ button {
   border-radius: 6px;
   padding: 1rem;
   width: 210px;
-  overflow: hidden;
   margin-bottom: 1rem;
   position: relative;
   z-index: 1;
@@ -102,6 +101,7 @@ button:focus-visible {
   background: #1e3a5f;
   border: 2px solid currentColor;
   border-radius: 6px;
+  z-index: 2;
 }
 
 .dropdown-menu.up {
