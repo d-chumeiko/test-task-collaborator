@@ -75,6 +75,13 @@ button {
   }
 }
 
+.card-description {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
 button:focus-visible {
   outline: 3px solid #fff;
   outline-offset: 3px;
